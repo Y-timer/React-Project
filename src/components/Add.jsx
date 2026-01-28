@@ -6,14 +6,13 @@ import toast from "react-hot-toast";
 function Add(){
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [_memoList, setMemoList] = useLocalStorage('memo-list');
+  const [_memoList, setMemoList] = useLocalStorage('memo-list',[]);
 
   function appendMemo(){
-
-    setMemoList((memoList) => [
-      ...memoList,
-      {id: Date.now(), title, body: content}
-    ]);
+    setMemoList(memoList => [
+    ...memoList,
+    { id: Date.now(), title, body: content }
+  ]);
 
     toast.success('Successfully addded');
     
@@ -23,8 +22,9 @@ function Add(){
 
 
   return (
-    <from style={{ textAlign: 'center' }}>
+    <form style={{ textAlign: 'center' }}>
       <TextField
+        value={title}
         id="outlined-basic"
         label="title"
         variant="outlined"
@@ -32,7 +32,8 @@ function Add(){
         onChange={(e) => setTitle(e.target.value)}
       />
       <br/>
-      <TextField 
+      <TextField
+        value={content}
         id="outlined-multiline-static"
         label="content"
         multiline
@@ -41,8 +42,8 @@ function Add(){
         style={{ marginBottom: '10px' }}
       />
       <br />
-      <Button variant="contained" onClick={appendMemo}>ADD</Button>
-    </from>
+      <Button variant="contained" onClick={appendMemo}>Add</Button>
+    </form>
   )
 }
 export default Add

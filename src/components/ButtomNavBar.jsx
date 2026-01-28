@@ -21,8 +21,9 @@ export default function ButtomNavBar() {
       navigate('/add');
       return;
     }
-    if(value === 0){
-      navigate('/search')
+    if(value === 2){
+      navigate('/search');
+      return;
     }
   },[value]);
 

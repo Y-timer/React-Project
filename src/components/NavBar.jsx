@@ -12,7 +12,7 @@ export default function NavBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" align='center' sx={{ flexGrow: 1 }}>
-            News
+            Kevin Memos
           </Typography>
         </Toolbar>
       </AppBar>
