@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import MemosList from "./MemosList";
+import MemosList from "../home/MemosList";
 import { useState } from "react";
 
 function Search(){

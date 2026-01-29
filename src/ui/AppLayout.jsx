@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import NavBar from "./Navbar";
+import NavBar from "./NavBar";
 import ButtomNavBar from "./ButtomNavBar";
 import { Toaster } from "react-hot-toast"
 
